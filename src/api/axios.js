@@ -5,7 +5,7 @@ export const api = axios.create({
 })
 
 export const getPostsPage = async (pageParam = 1, options = {}) => {
-    const response = await api.get(`api/character?_page=${pageParam}`, options)
+    const response = await api.get(`api/character?page=${pageParam}`, options)
     console.log(response.data["results"])
     return response.data["results"]
 }
